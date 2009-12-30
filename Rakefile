@@ -7,9 +7,9 @@ begin
     gem.name = "vies"
     gem.summary = "Permits VAT validation within ActiveRecord using EU VIES Web Service."
     gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "alessandro.dalgrande@develon.com"
+    gem.email = "lab@develon.com"
     gem.homepage = "http://github.com/develon/vies"
-    gem.authors = ["Alessandro Dal Grande"]
+    gem.authors = ["Develon"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
