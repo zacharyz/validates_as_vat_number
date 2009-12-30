@@ -5,10 +5,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "vies"
-    gem.summary = %Q{TODO: one-line summary of your gem}
+    gem.summary = "Permits VAT validation within ActiveRecord using EU VIES Web Service."
     gem.description = %Q{TODO: longer description of your gem}
     gem.email = "alessandro.dalgrande@develon.com"
-    gem.homepage = "http://github.com/aledalgrande/vies"
+    gem.homepage = "http://github.com/develon/vies"
     gem.authors = ["Alessandro Dal Grande"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
