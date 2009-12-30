@@ -14,4 +14,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2009 Alessandro Dal Grande. See LICENSE for details.
+Copyright (c) 2009 Develon. See LICENSE for details.
