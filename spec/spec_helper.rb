@@ -2,6 +2,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'rubygems'
 require 'active_record'
+require File.dirname(__FILE__) + '/../lib/validates_as_vies'
 require 'spec'
 require 'spec/autorun'
 
@@ -12,7 +13,7 @@ Spec::Runner.configure do |config|
 end
 
 class Company < ActiveRecord::Base
-  acts_as_vies
+  validates_as_vies :vat
   
   def self.columns() @columns ||= []; end
 
@@ -21,6 +22,5 @@ class Company < ActiveRecord::Base
   end
 
   column :name, :string
-  column :country, :string
   column :vat, :string
 end
