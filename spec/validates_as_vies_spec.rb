@@ -17,4 +17,10 @@ describe Develon::ValidatesAsVies do
     fake_company.valid?.should == false
     fake_company.errors.on('vat').should_not == nil
   end
+  
+  it "should invalidate locally if country is not valid" do
+    develon = Company.new(:name => 'Develon', :vat => 'KO03018900245')
+    develon.valid?.should == false
+    develon.errors.on('vat').should == 'has an invalid country'
+  end
 end
