@@ -13,7 +13,7 @@ Spec::Runner.configure do |config|
 end
 
 class Company < ActiveRecord::Base
-  validates_as_vies :vat
+  validates_as_vat_number :vat
   
   def self.columns() @columns ||= []; end
 

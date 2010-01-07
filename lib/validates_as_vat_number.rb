@@ -2,7 +2,7 @@ module Develon
   module ValidatesAsVatNumber
     require 'soap/wsdlDriver'
 
-    def validates_as_vies(*attr_names)
+    def validates_as_vat_number(*attr_names)
       configuration = {
         :message   => 'is an invalid VAT number',
         :allow_nil => false 

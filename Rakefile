@@ -4,10 +4,10 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "vies"
+    gem.name = "validates_as_vat_number"
     gem.summary = "Permits VAT validation within ActiveRecord using EU VIES Web Service."
     gem.description = "Now you can validate a VAT using the European service called VIES, 
-                       to ensure it exists. Only require this gem and call validate_as_vies 
+                       to ensure it exists. Only require this gem and call validate_as_vat_number 
                        on your VAT field, in an Active Record object."
     gem.email = "lab@develon.com"
     gem.homepage = "http://github.com/develon/validates_as_vat_number"
@@ -41,7 +41,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "vies #{version}"
+  rdoc.title = "validate_as_vat_number #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

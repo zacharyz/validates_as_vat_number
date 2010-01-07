@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe Develon::ValidatesAsVatNumber do
   it "is included" do
     class A < ActiveRecord::Base
-      validates_as_vies :vat
+      validates_as_vat_number :vat
     end
   end
   
