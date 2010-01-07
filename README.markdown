@@ -6,11 +6,11 @@ Now you can validate a VAT using the European service called VIES, to ensure it 
 
 Specify it in your Rails config.
 
-`config.gem 'validates_as_vat_number', :source => 'http://gemcutter.org'`
+    config.gem 'validates_as_vat_number', :source => 'http://gemcutter.org'
 
 Then install it.
 
-`rake gems:install`
+    rake gems:install
 
 ## Example
 
