@@ -1,24 +1,25 @@
-= validates_as_vat_number
+## validates_as_vat_number
 
 Now you can validate a VAT using the European service called VIES, to ensure it exists. Only require this gem and call validate_as_vat_number on your VAT field, in an Active Record object.
 
-= Install
+## Install 
 
 Specify it in your Rails config.
 
-  config.gem 'validates_as_vat_number', :source => 'http://gemcutter.org'
+    config.gem 'validates_as_vat_number', :source => 'http://gemcutter.org'
 
 Then install it.
 
-  rake gems:install
+    rake gems:install
 
-= Example
+## Example
 
-class Company < ActiveRecord::Base
-	validates_as_vat_number :vat
-end
 
-= Note on Patches/Pull Requests
+    class Company < ActiveRecord::Base
+    	validates_as_vat_number :vat
+    end
+
+## Note on Patches/Pull Requests
  
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -28,6 +29,6 @@ end
   (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-= Copyright
+## Copyright
 
 Copyright (c) 2009 Develon. See LICENSE for details.
