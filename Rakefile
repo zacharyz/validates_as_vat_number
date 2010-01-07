@@ -10,7 +10,7 @@ begin
                        to ensure it exists. Only require this gem and call validate_as_vies 
                        on your VAT field, in an Active Record object."
     gem.email = "lab@develon.com"
-    gem.homepage = "http://github.com/develon/vies"
+    gem.homepage = "http://github.com/develon/validates_as_vat_number"
     gem.authors = ["Alessandro Dal Grande", "Marco Sanson"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings

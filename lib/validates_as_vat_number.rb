@@ -1,5 +1,5 @@
 module Develon
-  module ValidatesAsVies
+  module ValidatesAsVatNumber
     require 'soap/wsdlDriver'
 
     def validates_as_vies(*attr_names)
@@ -36,4 +36,4 @@ module Develon
   end
 end
 
-ActiveRecord::Base.extend Develon::ValidatesAsVies
+ActiveRecord::Base.extend Develon::ValidatesAsVatNumber

@@ -2,7 +2,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'rubygems'
 require 'active_record'
-require File.dirname(__FILE__) + '/../lib/validates_as_vies'
+require File.dirname(__FILE__) + '/../lib/validates_as_vat_number'
 require 'spec'
 require 'spec/autorun'
 
