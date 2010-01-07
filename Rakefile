@@ -6,7 +6,9 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "vies"
     gem.summary = "Permits VAT validation within ActiveRecord using EU VIES Web Service."
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = "Now you can validate a VAT using the European service called VIES, 
+                       to ensure it exists. Only require this gem and call validate_as_vies 
+                       on your VAT field, in an Active Record object."
     gem.email = "lab@develon.com"
     gem.homepage = "http://github.com/develon/vies"
     gem.authors = ["Alessandro Dal Grande", "Marco Sanson"]
