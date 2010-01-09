@@ -43,8 +43,8 @@ module Develon
       @driver.checkVat(:countryCode => country_code, :vatNumber => vat_number).valid == 'true'
     end
     
-    def country_code(vat_number)
-      vat_number[0,2].upcase
+    def country_code(vat)
+      vat[0,2].upcase
     end
   end
 end
