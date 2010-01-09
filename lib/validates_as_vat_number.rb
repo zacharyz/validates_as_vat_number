@@ -21,13 +21,13 @@ module Develon
                      'SK' =>/^SK\d{10}$/ }
 
       validates_each(attr_names,configuration) do |record, attr_name, value|
-        if iso3661_country_codes.include?(value[0,2].upcase)
-          if structures[value[0,2].upcase].match(value).nil? || check_vat(value[0,2], value.gsub(/^\w\w/, '')) == false
-            record.errors.add(attr_name, :not_valid, :default => configuration[:message])
-          end
+        country = country_code(value)
+        if iso3661_country_codes.include?(country)
+          message = configuration[:message] unless structures[country].match(value) && check_vat(country, value.gsub(/^\w\w/, ''))
         else
-          record.errors.add(attr_name, 'has an invalid country')
+          message = 'has an invalid country'
         end
+        record.errors.add(attr_name, :not_valid, :default => message) unless message.nil?
       end
     end
 
@@ -41,6 +41,10 @@ module Develon
     def check_vat(country_code, vat_number)
       @driver = vies_driver unless @driver
       @driver.checkVat(:countryCode => country_code, :vatNumber => vat_number).valid == 'true'
+    end
+    
+    def country_code(vat_number)
+      vat_number[0,2].upcase
     end
   end
 end
