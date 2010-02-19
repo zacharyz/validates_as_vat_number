@@ -34,7 +34,7 @@ module Develon
     protected
 
     def vies_driver
-      wsdl = "http://ec.europa.eu/taxation_customs/vies/api/checkVatPort?wsdl"
+      wsdl = "http://ec.europa.eu/taxation_customs/vies/services/checkVatService?wsdl"
       @driver = SOAP::WSDLDriverFactory.new(wsdl).create_rpc_driver
     end
 
