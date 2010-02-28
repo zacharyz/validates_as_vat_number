@@ -22,7 +22,7 @@ module Develon
 
       validates_each(attr_names,configuration) do |record, attr_name, value|
         country = country_code(value)
-        if iso3661_country_codes.include?(country)
+        if structures.include?(country)
           message = configuration[:message] unless structures[country].match(value) && check_vat(country, value.gsub(/^\w\w/, ''))
         else
           message = 'has an invalid country'
