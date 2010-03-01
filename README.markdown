@@ -19,6 +19,8 @@ Then install it.
     	validates_as_vat_number :vat
     end
 
+## Acknowledgements
+Thanks to [sborsje](http://github.com/sborsje) for fixing the instance with valid ISO 3660 but unsupported codes.
 
 ## Note on Patches/Pull Requests
  
