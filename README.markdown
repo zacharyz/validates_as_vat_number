@@ -1,6 +1,6 @@
 ## validates_as_vat_number
 
-Now you can validate VAT using the European service called [VIES](http://ec.europa.eu/taxation_customs/vies/viesspec.do), to ensure it exists. Only require this gem and call validate_as_vat_number on your VAT field, in an Active Record object.
+Now you can validate VAT using the European service called [VIES](http://ec.europa.eu/taxation_customs/vies/services/checkVatService?wsdl), to ensure it exists. Only require this gem and call validate_as_vat_number on your VAT field, in an Active Record object.
 
 ## Install 
 

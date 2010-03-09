@@ -1,6 +1,6 @@
 module Develon
   module ValidatesAsVatNumber
-    require 'soap/wsdlDriver'
+    require 'savon'
 
     def validates_as_vat_number(*attr_names)
       configuration = {
@@ -32,13 +32,13 @@ module Develon
     protected
 
     def vies_driver
-      wsdl = "http://ec.europa.eu/taxation_customs/vies/api/checkVatPort?wsdl"
-      @driver = SOAP::WSDLDriverFactory.new(wsdl).create_rpc_driver
+      wsdl = "http://ec.europa.eu/taxation_customs/vies/services/checkVatService?wsdl"
+      @driver = Savon::Client.new(wsdl)
     end
 
     def check_vat(country_code, vat_number)
       @driver = vies_driver unless @driver
-      @driver.checkVat(:countryCode => country_code, :vatNumber => vat_number).valid == 'true'
+      @driver.check_vat { |soap| soap.body = { :country_code => country_code, :vat_number => vat_number } }.to_hash[:check_vat_response][:valid]
     end
     
     def country_code(vat)
